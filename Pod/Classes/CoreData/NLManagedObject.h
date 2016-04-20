@@ -33,7 +33,7 @@
  *
  *  @return Array of items match the condition.
  */
-+ (nullable NSArray<__kindof NSManagedObject *> *)itemsInCoreData:(nonnull NLCoreData *)cda sortDescriptions:(nonnull NSArray *)sortDescriptions withFormat:(nonnull NSString *)fmt,...;
+//+ (nullable NSArray<__kindof NSManagedObject *> *)itemsInCoreData:(nonnull NLCoreData *)cda sortDescriptions:(nonnull NSArray *)sortDescriptions withFormat:(nonnull NSString *)fmt,...;
 
 /**
  *  Fetch items addition by limited range.
@@ -46,7 +46,7 @@
  *
  *  @return Array of items match the condition.
  */
-+ (NSArray<__kindof NSManagedObject *> *)itemsInCoreData:(nonnull NLCoreData *)cda sortDescriptions:(NSArray *)sortDescriptions fromOffset:(NSUInteger)offset limitedBy:(NSUInteger)limitNumber withFormat:(NSString *)fmt,...;
+//+ (NSArray<__kindof NSManagedObject *> *)itemsInCoreData:(nonnull NLCoreData *)cda sortDescriptions:(NSArray *)sortDescriptions fromOffset:(NSUInteger)offset limitedBy:(NSUInteger)limitNumber withFormat:(NSString *)fmt,...;
 
 /**
  *  Fetch item in specified context.
@@ -55,7 +55,7 @@
  *
  *  @return Last item of the managed object in context.
  */
-+ (id)lastItemInCoreData:(nonnull NLCoreData *)cda;
+//+ (id)lastItemInCoreData:(nonnull NLCoreData *)cda;
 
 /**
  *  Fetch item in specified context through predicate.
@@ -65,7 +65,7 @@
  *
  *  @return Last item of the managed object in context.
  */
-+ (id)lastItemInCoreData:(nonnull NLCoreData *)cde usingPredicate:(NSPredicate *)predicate;
+//+ (id)lastItemInCoreData:(nonnull NLCoreData *)cde usingPredicate:(NSPredicate *)predicate;
 
 /**
  *  Fetch item in specified context through format string.
@@ -75,5 +75,5 @@
  *
  *  @return Last item of the managed object in context.
  */
-+ (id)lastItemInCoreData:(nonnull NLCoreData *)cde withFormat:(NSString *)fmt,...;
+//+ (id)lastItemInCoreData:(nonnull NLCoreData *)cde withFormat:(NSString *)fmt,...;
 @end

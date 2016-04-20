@@ -35,7 +35,7 @@
         instance.databaseFileName = databaseFileName;
     }
     if (rootPath) {
-        instance.dataRootPath = rootPath;
+        instance.dataRootPath = [NSURL fileURLWithPath:rootPath];
     }
     return instance;
 }

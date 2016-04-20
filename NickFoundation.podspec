@@ -44,6 +44,7 @@ Pod::Spec.new do |s|
 
   s.subspec 'CoreData' do |cs|
     cs.source_files = 'Pod/Classes/CoreData'
+    cs.dependency 'NickFoundation/Common'
   end
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
