@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "NickFoundation"
-  s.version          = "0.1.1"
+  s.version          = "0.1.2"
   s.summary          = "Private Lib of Nick"
 
 # This description is used to generate tags and improve search results.
@@ -29,7 +29,7 @@ Pod::Spec.new do |s|
 
   s.platform     = :ios, '6.0'
   s.requires_arc = true
-  s.default_subspec = 'Common','UILib','CoreData'
+  s.default_subspec = 'Common','Category','CoreData'
 
   s.resource_bundles = {
     'NickFoundation' => ['Pod/Assets/*.png']
@@ -38,8 +38,8 @@ Pod::Spec.new do |s|
     cs.source_files = 'Pod/Classes/Common'
   end
 
-  s.subspec 'UILib' do |us|
-    us.source_files = 'Pod/Classes/UILib'
+  s.subspec 'Category' do |cs|
+    cs.source_files = 'Pod/Classes/Category'
   end
 
   s.subspec 'CoreData' do |cs|
