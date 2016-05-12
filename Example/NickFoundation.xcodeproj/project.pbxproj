@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		010619D81CE46294000FA734 /* NSDateEasyTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 010619D71CE46294000FA734 /* NSDateEasyTest.m */; };
+		010619DA1CE47125000FA734 /* NLNSStringHexTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 010619D91CE47125000FA734 /* NLNSStringHexTest.m */; };
 		012531831CC7588F00BF21A4 /* UserInfo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 012531811CC7588F00BF21A4 /* UserInfo.xcdatamodeld */; };
 		0125318E1CC75A0200BF21A4 /* UserInfoEntity+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 0125318B1CC75A0200BF21A4 /* UserInfoEntity+CoreDataProperties.m */; };
 		0125318F1CC75A0200BF21A4 /* UserInfoEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 0125318D1CC75A0200BF21A4 /* UserInfoEntity.m */; };
@@ -40,6 +42,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		010619D71CE46294000FA734 /* NSDateEasyTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDateEasyTest.m; sourceTree = "<group>"; };
+		010619D91CE47125000FA734 /* NLNSStringHexTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NLNSStringHexTest.m; sourceTree = "<group>"; };
 		012531821CC7588F00BF21A4 /* UserInfo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = UserInfo.xcdatamodel; sourceTree = "<group>"; };
 		0125318A1CC75A0200BF21A4 /* UserInfoEntity+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UserInfoEntity+CoreDataProperties.h"; sourceTree = "<group>"; };
 		0125318B1CC75A0200BF21A4 /* UserInfoEntity+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UserInfoEntity+CoreDataProperties.m"; sourceTree = "<group>"; };
@@ -180,8 +184,10 @@
 			isa = PBXGroup;
 			children = (
 				6003F5BB195388D20070C39A /* Tests.m */,
+				010619D91CE47125000FA734 /* NLNSStringHexTest.m */,
 				012531941CC76BBA00BF21A4 /* NLCoreDataTests.m */,
 				6003F5B6195388D20070C39A /* Supporting Files */,
+				010619D71CE46294000FA734 /* NSDateEasyTest.m */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -428,6 +434,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				012531951CC76BBB00BF21A4 /* NLCoreDataTests.m in Sources */,
+				010619DA1CE47125000FA734 /* NLNSStringHexTest.m in Sources */,
+				010619D81CE46294000FA734 /* NSDateEasyTest.m in Sources */,
 				6003F5BC195388D20070C39A /* Tests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -544,6 +552,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NickFoundation/NickFoundation-Prefix.pch";
 				INFOPLIST_FILE = "NickFoundation/NickFoundation-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -560,6 +569,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NickFoundation/NickFoundation-Prefix.pch";
 				INFOPLIST_FILE = "NickFoundation/NickFoundation-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -584,6 +594,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "Tests/Tests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NickFoundation_Example.app/NickFoundation_Example";
@@ -604,6 +615,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Tests/Tests-Prefix.pch";
 				INFOPLIST_FILE = "Tests/Tests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NickFoundation_Example.app/NickFoundation_Example";

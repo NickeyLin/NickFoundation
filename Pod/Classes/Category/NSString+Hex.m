@@ -17,6 +17,12 @@
 }
 
 + (NSInteger)hexStringToInteger:(NSString *)hexString{
+    if ([hexString hasPrefix:@"0x"]) {
+        hexString = [hexString substringFromIndex:2];
+    }else if ([hexString hasPrefix:@"#"]){
+        hexString = [hexString substringFromIndex:1];
+    }
+    
     const char* utf8String = [hexString UTF8String];
     char* endPtr = NULL;
     NSInteger num = strtol(utf8String, &endPtr, 16);
