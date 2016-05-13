@@ -8,6 +8,11 @@
 
 #import "NLViewController.h"
 #import "UserInfoEntity.h"
+#import "NLScanQRUtil.h"
+#import "NLCoreData.h"
+#import <NickFoundation/NickFoundation-umbrella.h>
+
+//#import "NLScanQRUtil.h"
 
 @interface NLViewController ()
 
@@ -34,7 +39,12 @@
     NSLog(@"%@", @([UserInfoEntity itemsInCoreData:coredata].count));
     NSLog(@"%@", [UserInfoEntity itemsInCoreData:coredata withFormat:@"uName==\"nick\""]);
 }
-
+- (void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    [NLScanQRUtil presentQRScanInViewController:self Complete:^(NSString *result, NSError *error) {
+        NSLog(@"%@, %@", result, error);
+    }];
+}
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

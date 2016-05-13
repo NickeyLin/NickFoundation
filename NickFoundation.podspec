@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "NickFoundation"
-  s.version          = "0.1.3"
+  s.version          = "0.1.4"
   s.summary          = "Private Lib of Nick"
 
 # This description is used to generate tags and improve search results.
@@ -29,13 +29,19 @@ Pod::Spec.new do |s|
 
   s.platform     = :ios, '6.0'
   s.requires_arc = true
-  s.default_subspec = 'Common','Category','CoreData'
+  s.default_subspec = 'UILib','Common','Category','CoreData','QRCode'
 
   s.resource_bundles = {
     'NickFoundation' => ['Pod/Assets/*.png']
   }
+#s.source_files = 'Pod/Classes/*'
+
   s.subspec 'Common' do |cs|
     cs.source_files = 'Pod/Classes/Common'
+  end
+
+  s.subspec 'UILib' do |cs|
+    cs.source_files = 'Pod/Classes/UILib'
   end
 
   s.subspec 'Category' do |cs|
@@ -46,6 +52,12 @@ Pod::Spec.new do |s|
     cs.source_files = 'Pod/Classes/CoreData'
     cs.dependency 'NickFoundation/Common'
   end
+
+  s.subspec 'QRCode' do |cs|
+    cs.source_files = 'Pod/Classes/QRCode/**/*'
+    cs.dependency 'NickFoundation/UILib'
+  end
+
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
   # s.dependency 'AFNetworking', '~> 2.3'
