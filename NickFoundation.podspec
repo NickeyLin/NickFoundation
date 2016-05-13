@@ -55,6 +55,7 @@ Pod::Spec.new do |s|
 
   s.subspec 'QRCode' do |cs|
     cs.source_files = 'Pod/Classes/QRCode/**/*'
+    cs.dependency 'NickFoundation/UILib'
   end
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
