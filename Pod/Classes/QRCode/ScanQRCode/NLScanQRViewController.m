@@ -8,7 +8,6 @@
 
 #import "NLScanQRViewController.h"
 #import "NLAnimation.h"
-#import "UIView+Easy.h"
 
 @interface NLScanQRViewController (){
     __weak ScanQRCompleteBlock _completeBlock;
@@ -152,7 +151,7 @@
  *  以动画形式绘制扫描线
  */
 - (void)moveScanLayer{
-    CABasicAnimation *animation = [NLAnimation moveToY:self.scanRectView.height withDuration:2];
+    CABasicAnimation *animation = [NLAnimation moveToY:self.scanRectView.frame.size.height withDuration:2];
     animation.autoreverses = YES;
     animation.repeatCount = INT_MAX;
     animation.timingFunction = [CAMediaTimingFunction functionWithName:@"linear"];
