@@ -10,7 +10,7 @@
 #import "NLAnimation.h"
 
 @interface NLScanQRViewController (){
-    __weak ScanQRCompleteBlock _completeBlock;
+    ScanQRCompleteBlock _completeBlock;
     UIView *_scanLayer;
 }
 @property(nonatomic) CGFloat    scanMaskX;
