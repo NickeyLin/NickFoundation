@@ -143,18 +143,18 @@
     if (![self.managedObjectContext hasChanges]) {
         return YES;
     }
-    BOOL result;
-    [self.persistentStoreCoordinator lock];
-    NSError *error = nil;
-    
-    result = [self.managedObjectContext save:&error];
-    
-    if (!result) {
-        if (error != nil) {
-            CHLog(@"%s, error:%@", __FUNCTION__, error);
+    __block BOOL result;
+    [self.persistentStoreCoordinator performBlockAndWait:^{
+        NSError *error = nil;
+        
+        result = [self.managedObjectContext save:&error];
+        
+        if (!result) {
+            if (error != nil) {
+                CHLog(@"%s, error:%@", __FUNCTION__, error);
+            }
         }
-    }
-    [self.persistentStoreCoordinator unlock];
+    }];
     return result;
 }
 - (BOOL)deleteItem:(__kindof NSManagedObject *)item{
@@ -186,11 +186,9 @@
         return;
     }
     
-    [self.persistentStoreCoordinator lock];
-    
-    [self.managedObjectContext undo];
-
-    [self.persistentStoreCoordinator unlock];
+    [self.persistentStoreCoordinator performBlockAndWait:^{
+        [self.managedObjectContext undo];
+    }];
 }
 - (nullable NSManagedObject *)managedObjectByManagedID:(nonnull NSManagedObjectID *)managedID{
     if (!managedID || !self.managedObjectContext) {
