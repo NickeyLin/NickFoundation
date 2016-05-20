@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "NickFoundation"
-  s.version          = "0.1.4"
+  s.version          = "0.1.5"
   s.summary          = "Private Lib of Nick"
 
 # This description is used to generate tags and improve search results.
@@ -20,11 +20,11 @@ Pod::Spec.new do |s|
 "Private Lib of Nick , make coding fast"
                        DESC
 
-  s.homepage         = "https://coding.net/u/nickey/p/NickFoundation/git"
+  s.homepage         = "https://github.com/NickeyLin/NickFoundation"
   # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
   s.license          = 'MIT'
   s.author           = { "Nick.Lin" => "tick_lin@sina.com" }
-  s.source           = { :git => "https://git.coding.net/nickey/NickFoundation.git", :tag => s.version.to_s }
+  s.source           = { :git => "https://github.com/NickeyLin/NickFoundation.git", :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.platform     = :ios, '6.0'
