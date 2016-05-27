@@ -3,6 +3,7 @@ use_frameworks!
 
 target 'NickFoundation_Example' do
   pod 'NickFoundation', :path => '../'
+  pod 'NickFoundation/Encode', :path => '../'
 end
 
 target 'NickFoundation_Tests' do

@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "NickFoundation"
-  s.version          = "0.1.5"
+  s.version          = "0.1.6"
   s.summary          = "Private Lib of Nick"
 
 # This description is used to generate tags and improve search results.
@@ -56,6 +56,10 @@ Pod::Spec.new do |s|
   s.subspec 'QRCode' do |cs|
     cs.source_files = 'Pod/Classes/QRCode/**/*'
     cs.dependency 'NickFoundation/UILib'
+  end
+
+  s.subspec 'Encode' do |cs|
+    cs.source_files = 'Pod/Classes/Encode/**/*'
   end
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
