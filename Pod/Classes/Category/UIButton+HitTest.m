@@ -6,6 +6,8 @@
 //  Copyright © 2015年 ChangHong. All rights reserved.
 //
 
+#if TARGET_OS_IOS
+
 #import "UIButton+HitTest.h"
 #import <objc/runtime.h>
 
@@ -40,3 +42,4 @@ static char HIT_TEST_EDGE_INSETS_IDENTIFER;
     return nil;
 }
 @end
+#endif

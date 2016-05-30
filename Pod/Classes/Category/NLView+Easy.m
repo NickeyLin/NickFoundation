@@ -6,9 +6,9 @@
 //  Copyright © 2015年 ChangHong. All rights reserved.
 //
 
-#import "UIView+Easy.h"
+#import "NLView+Easy.h"
 
-@implementation UIView (Easy)
+@implementation NLView (Easy)
 
 - (void)setX:(CGFloat)x{
     CGRect frame = self.frame;
@@ -66,25 +66,53 @@
 }
 
 - (void)setCenterX:(CGFloat)centerX{
+#if TARGET_OS_IOS
     CGPoint center = self.center;
     center.x = centerX;
     self.center = center;
+#else
+    CGFloat currentCenterX = self.x + self.width / 2;
+    CGFloat offsetX = centerX - currentCenterX;
+    CGRect frame = CGRectOffset(self.frame, offsetX, 0);
+    self.frame = frame;
+#endif
+    
+    
 }
 
 - (CGFloat)centerX{
+#if TARGET_OS_IOS
+
     return self.center.x;
+#else
+    
+    return self.x + self.width / 2;
+#endif
 }
 
 - (void)setCenterY:(CGFloat)centerY{
+#if TARGET_OS_IOS
+
     CGPoint center = self.center;
     center.y = centerY;
     self.center = center;
+#else
+    CGFloat currentCenterY = self.y + self.height / 2;
+    CGFloat offsetY = centerY - currentCenterY;
+    CGRect frame = CGRectOffset(self.frame, 0, offsetY);
+    self.frame = frame;
+#endif
 }
 
 - (CGFloat)centerY{
+#if TARGET_OS_IOS
     return self.center.y;
+#else
+    return self.y + self.height / 2;
+#endif
 }
 
+#if TARGET_OS_IOS
 - (id)firstResponder{
     if ([self isFirstResponder]) {
         return self;
@@ -98,4 +126,5 @@
     }
     return result;
 }
+#endif
 @end

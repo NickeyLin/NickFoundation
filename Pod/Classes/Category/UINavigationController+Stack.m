@@ -5,6 +5,7 @@
 //  Created by Nick.Lin on 15/9/28.
 //  Copyright © 2015年 ChangHong. All rights reserved.
 //
+#if TARGET_OS_IOS
 
 #import "UINavigationController+Stack.h"
 
@@ -100,3 +101,4 @@
 }
 
 @end
+#endif

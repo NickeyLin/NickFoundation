@@ -6,9 +6,19 @@
 //  Copyright © 2015年 ChangHong. All rights reserved.
 //
 
+#ifndef NLView
+#if TARGET_OS_IOS
+#define NLView UIView
 #import <UIKit/UIKit.h>
 
-@interface UIView (Easy)
+#else
+#define NLView NSView
+
+#endif
+#endif
+
+
+@interface NLView (Easy)
 @property (nonatomic, assign) CGFloat x;
 @property (nonatomic, assign) CGFloat y;
 @property (nonatomic, assign) CGFloat width;
@@ -21,5 +31,7 @@
 @property (nonatomic, assign) CGFloat centerX;
 @property (nonatomic, assign) CGFloat centerY;
 
+#if TARGET_OS_IOS
 - (id)firstResponder;
+#endif
 @end

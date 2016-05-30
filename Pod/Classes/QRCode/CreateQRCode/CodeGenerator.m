@@ -5,6 +5,7 @@
 //  Created by R0CKSTAR on 12/25/13.
 //  Copyright (c) 2013 P.D.Q. All rights reserved.
 //
+#if TARGET_OS_IOS
 
 #import "CodeGenerator.h"
 
@@ -92,3 +93,4 @@ NSString *const DIGITS_STRING = @"0123456789";
     return nil;
 }
 @end
+#endif

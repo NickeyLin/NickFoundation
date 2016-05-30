@@ -14,3 +14,9 @@
 + (NSString *)integerToBinaryString:(NSInteger)value;
 + (NSString *)integerToHexString:(NSInteger)value;
 @end
+
+@interface NSData (HexString)
+- (NSString *)hexString;
++ (NSData *)dataFromHexString:(NSString *)hexString;
+
+@end

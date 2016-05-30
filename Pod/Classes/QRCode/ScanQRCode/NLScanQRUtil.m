@@ -6,6 +6,8 @@
 //
 //
 
+#if TARGET_OS_IOS
+
 #import "NLScanQRUtil.h"
 #import "NLScanQRViewController.h"
 
@@ -25,3 +27,4 @@
 }
 
 @end
+#endif

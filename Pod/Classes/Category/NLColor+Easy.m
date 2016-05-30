@@ -1,14 +1,14 @@
 //
-//  UIColor+Easy.m
+//  NLColor+Easy.m
 //  CHMobileUISDK
 //
 //  Created by Nick.Lin on 15/9/29.
 //  Copyright © 2015年 ChangHong. All rights reserved.
 //
 
-#import "UIColor+Easy.h"
+#import "NLColor+Easy.h"
 
-@implementation UIColor (EasyHex)
+@implementation NLColor (EasyHex)
 - (CGColorSpaceModel)colorSpaceModel {
     return CGColorSpaceGetModel(CGColorGetColorSpace(self.CGColor));
 }
@@ -135,7 +135,7 @@
 
 #pragma mark Arithmetic operations
 
-- (UIColor *)colorByLuminanceMapping {
+- (NLColor *)colorByLuminanceMapping {
     NSAssert(self.canProvideRGBComponents, @"Must be a RGB color to use arithmatic operations");
     
     CGFloat r,g,b,a;
@@ -143,76 +143,76 @@
     
     // http://en.wikipedia.org/wiki/Luma_(video)
     // Y = 0.2126 R + 0.7152 G + 0.0722 B
-    return [UIColor colorWithWhite:r*0.2126f + g*0.7152f + b*0.0722f
+    return [NLColor colorWithWhite:r*0.2126f + g*0.7152f + b*0.0722f
                              alpha:a];
     
 }
 
-- (UIColor *)colorByMultiplyingByRed:(CGFloat)red green:(CGFloat)green blue:(CGFloat)blue alpha:(CGFloat)alpha {
+- (NLColor *)colorByMultiplyingByRed:(CGFloat)red green:(CGFloat)green blue:(CGFloat)blue alpha:(CGFloat)alpha {
     NSAssert(self.canProvideRGBComponents, @"Must be a RGB color to use arithmatic operations");
     
     CGFloat r,g,b,a;
     if (![self red:&r green:&g blue:&b alpha:&a]) return nil;
     
-    return [UIColor colorWithRed:MAX(0.0, MIN(1.0, r * red))
+    return [NLColor colorWithRed:MAX(0.0, MIN(1.0, r * red))
                            green:MAX(0.0, MIN(1.0, g * green))
                             blue:MAX(0.0, MIN(1.0, b * blue))
                            alpha:MAX(0.0, MIN(1.0, a * alpha))];
 }
 
-- (UIColor *)colorByAddingRed:(CGFloat)red green:(CGFloat)green blue:(CGFloat)blue alpha:(CGFloat)alpha {
+- (NLColor *)colorByAddingRed:(CGFloat)red green:(CGFloat)green blue:(CGFloat)blue alpha:(CGFloat)alpha {
     NSAssert(self.canProvideRGBComponents, @"Must be a RGB color to use arithmatic operations");
     
     CGFloat r,g,b,a;
     if (![self red:&r green:&g blue:&b alpha:&a]) return nil;
     
-    return [UIColor colorWithRed:MAX(0.0, MIN(1.0, r + red))
+    return [NLColor colorWithRed:MAX(0.0, MIN(1.0, r + red))
                            green:MAX(0.0, MIN(1.0, g + green))
                             blue:MAX(0.0, MIN(1.0, b + blue))
                            alpha:MAX(0.0, MIN(1.0, a + alpha))];
 }
 
-- (UIColor *)colorByLighteningToRed:(CGFloat)red green:(CGFloat)green blue:(CGFloat)blue alpha:(CGFloat)alpha {
+- (NLColor *)colorByLighteningToRed:(CGFloat)red green:(CGFloat)green blue:(CGFloat)blue alpha:(CGFloat)alpha {
     NSAssert(self.canProvideRGBComponents, @"Must be a RGB color to use arithmatic operations");
     
     CGFloat r,g,b,a;
     if (![self red:&r green:&g blue:&b alpha:&a]) return nil;
     
-    return [UIColor colorWithRed:MAX(r, red)
+    return [NLColor colorWithRed:MAX(r, red)
                            green:MAX(g, green)
                             blue:MAX(b, blue)
                            alpha:MAX(a, alpha)];
 }
 
-- (UIColor *)colorByDarkeningToRed:(CGFloat)red green:(CGFloat)green blue:(CGFloat)blue alpha:(CGFloat)alpha {
+- (NLColor *)colorByDarkeningToRed:(CGFloat)red green:(CGFloat)green blue:(CGFloat)blue alpha:(CGFloat)alpha {
     NSAssert(self.canProvideRGBComponents, @"Must be a RGB color to use arithmatic operations");
     
     CGFloat r,g,b,a;
     if (![self red:&r green:&g blue:&b alpha:&a]) return nil;
     
-    return [UIColor colorWithRed:MIN(r, red)
+    return [NLColor colorWithRed:MIN(r, red)
                            green:MIN(g, green)
                             blue:MIN(b, blue)
                            alpha:MIN(a, alpha)];
 }
 
-- (UIColor *)colorByMultiplyingBy:(CGFloat)f {
+- (NLColor *)colorByMultiplyingBy:(CGFloat)f {
     return [self colorByMultiplyingByRed:f green:f blue:f alpha:1.0f];
 }
 
-- (UIColor *)colorByAdding:(CGFloat)f {
+- (NLColor *)colorByAdding:(CGFloat)f {
     return [self colorByMultiplyingByRed:f green:f blue:f alpha:0.0f];
 }
 
-- (UIColor *)colorByLighteningTo:(CGFloat)f {
+- (NLColor *)colorByLighteningTo:(CGFloat)f {
     return [self colorByLighteningToRed:f green:f blue:f alpha:0.0f];
 }
 
-- (UIColor *)colorByDarkeningTo:(CGFloat)f {
+- (NLColor *)colorByDarkeningTo:(CGFloat)f {
     return [self colorByDarkeningToRed:f green:f blue:f alpha:1.0f];
 }
 
-- (UIColor *)colorByMultiplyingByColor:(UIColor *)color {
+- (NLColor *)colorByMultiplyingByColor:(NLColor *)color {
     NSAssert(self.canProvideRGBComponents, @"Must be a RGB color to use arithmatic operations");
     
     CGFloat r,g,b,a;
@@ -221,7 +221,7 @@
     return [self colorByMultiplyingByRed:r green:g blue:b alpha:1.0f];
 }
 
-- (UIColor *)colorByAddingColor:(UIColor *)color {
+- (NLColor *)colorByAddingColor:(NLColor *)color {
     NSAssert(self.canProvideRGBComponents, @"Must be a RGB color to use arithmatic operations");
     
     CGFloat r,g,b,a;
@@ -230,7 +230,7 @@
     return [self colorByAddingRed:r green:g blue:b alpha:0.0f];
 }
 
-- (UIColor *)colorByLighteningToColor:(UIColor *)color {
+- (NLColor *)colorByLighteningToColor:(NLColor *)color {
     NSAssert(self.canProvideRGBComponents, @"Must be a RGB color to use arithmatic operations");
     
     CGFloat r,g,b,a;
@@ -239,7 +239,7 @@
     return [self colorByLighteningToRed:r green:g blue:b alpha:0.0f];
 }
 
-- (UIColor *)colorByDarkeningToColor:(UIColor *)color {
+- (NLColor *)colorByDarkeningToColor:(NLColor *)color {
     NSAssert(self.canProvideRGBComponents, @"Must be a RGB color to use arithmatic operations");
     
     CGFloat r,g,b,a;
@@ -270,7 +270,7 @@
     return [NSString stringWithFormat:@"%0.6X", (unsigned int)self.rgbHex];
 }
 
-+ (UIColor *)colorWithString:(NSString *)stringToConvert {
++ (NLColor *)colorWithString:(NSString *)stringToConvert {
     NSScanner *scanner = [NSScanner scannerWithString:stringToConvert];
     if (![scanner scanString:@"{" intoString:NULL]) return nil;
     const NSUInteger kMaxComponents = 4;
@@ -289,13 +289,13 @@
         }
     }
     if (![scanner isAtEnd]) return nil;
-    UIColor *color;
+    NLColor *color;
     switch (i) {
         case 2: // monochrome
-            color = [UIColor colorWithWhite:(c[0] / 255.0f) alpha:(c[1] / 255.0f)];
+            color = [NLColor colorWithWhite:(c[0] / 255.0f) alpha:(c[1] / 255.0f)];
             break;
         case 4: // RGB
-            color = [UIColor colorWithRed:(c[0] / 255.0f) green:(c[1] / 255.0f) blue:(c[2] / 255.0f) alpha:(c[3] / 255.0f)];
+            color = [NLColor colorWithRed:(c[0] / 255.0f) green:(c[1] / 255.0f) blue:(c[2] / 255.0f) alpha:(c[3] / 255.0f)];
             break;
         default:
             color = nil;
@@ -305,56 +305,57 @@
 
 #pragma mark Class methods
 
-+ (UIColor *)randomColor {
-    return [UIColor colorWithRed:(CGFloat)RAND_MAX / random()
++ (NLColor *)randomColor {
+    return [NLColor colorWithRed:(CGFloat)RAND_MAX / random()
                            green:(CGFloat)RAND_MAX / random()
                             blue:(CGFloat)RAND_MAX / random()
                            alpha:1.0f];
 }
 
-+ (UIColor *)colorWithRGBHex:(NSUInteger)hex {
++ (NLColor *)colorWithRGBHex:(NSUInteger)hex {
     int r = (hex >> 16) & 0xFF;
     int g = (hex >> 8) & 0xFF;
     int b = (hex) & 0xFF;
     
-    return [UIColor colorWithRed:r / 255.0f
+    return [NLColor colorWithRed:r / 255.0f
                            green:g / 255.0f
                             blue:b / 255.0f
                            alpha:1.0f];
 }
 
-+ (UIColor *)colorWithARGBHex:(NSUInteger)hex{
++ (NLColor *)colorWithARGBHex:(NSUInteger)hex{
     int b = hex & 0x000000FF;
     int g = ((hex & 0x0000FF00) >> 8);
     int r = ((hex & 0x00FF0000) >> 16);
     int a = ((hex & 0xFF000000) >> 24);
     
-    return [UIColor colorWithRed:r / 255.0f
+    return [NLColor colorWithRed:r / 255.0f
                            green:g / 255.0f
                             blue:b / 255.0f
                            alpha:a / 255.f];
 }
 
-// Returns a UIColor by scanning the string for a hex number and passing that to +[UIColor colorWithRGBHex:]
+// Returns a NLColor by scanning the string for a hex number and passing that to +[NLColor colorWithRGBHex:]
 // Skips any leading whitespace and ignores any trailing characters
-+ (UIColor *)colorWithHexString:(NSString *)stringToConvert {
++ (NLColor *)colorWithHexString:(NSString *)stringToConvert {
     NSScanner *scanner = [NSScanner scannerWithString:stringToConvert];
     unsigned hexNum;
     if (![scanner scanHexInt:&hexNum]) return nil;
-    return [UIColor colorWithRGBHex:hexNum];
+    return [NLColor colorWithRGBHex:hexNum];
 }
 
 @end
 
-@implementation UIImage (Color)
+@implementation NLImage (Color)
 
 
-+ (UIImage *)createImageWithColor:(UIColor *)color{
++ (NLImage *)createImageWithColor:(NLColor *)color{
     
     return [self createImageWithColor:color withSize:CGSizeMake(1, 1)];
 }
 
-+ (UIImage *)createImageWithColor:(UIColor *)color withSize:(CGSize)size{
++ (NLImage *)createImageWithColor:(NLColor *)color withSize:(CGSize)size{
+#if TARGET_OS_IOS
     CGRect rect = CGRectMake(0, 0, size.width, size.height);
     UIGraphicsBeginImageContext(rect.size);
     CGContextRef context = UIGraphicsGetCurrentContext();
@@ -363,6 +364,13 @@
     UIImage *theImage = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     return theImage;
+#else
+    NSImage *image = [[NSImage alloc] initWithSize:size];
+    [image lockFocus];
+    [color drawSwatchInRect:NSMakeRect(0, 0, size.width, size.height)];
+    [image unlockFocus];
+    return image;
+#endif
 }
 
 @end

@@ -5,6 +5,9 @@
 //  Created by 王必姣 on 15/10/19.
 //  Copyright (c) 2015 ChangHong. All rights reserved.
 //
+
+#if TARGET_OS_IOS
+
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
 #import <AVFoundation/AVFoundation.h>
@@ -106,3 +109,4 @@ extern NSString *const DIGITS_STRING;
 
 @end
 
+#endif

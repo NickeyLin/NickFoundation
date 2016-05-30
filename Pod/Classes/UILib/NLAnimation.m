@@ -5,6 +5,7 @@
 //  Created by 林 建 on 13-4-2.
 //  Copyright (c) 2013年 ChangHong. All rights reserved.
 //
+#if TARGET_OS_IOS
 
 #import "NLAnimation.h"
 @implementation NLAnimation
@@ -159,3 +160,4 @@
 }
 
 @end
+#endif

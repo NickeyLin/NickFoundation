@@ -6,6 +6,7 @@
 //  Copyright (c) 2013年 ChangHong. All rights reserved.
 //
 
+#if TARGET_OS_IOS
 #import <Foundation/Foundation.h>
 #import <QuartzCore/QuartzCore.h>
 #import <UIKit/UIKit.h>
@@ -34,3 +35,4 @@
 
 +(CABasicAnimation *)rotation:(CGFloat)degree withDuration:(NSTimeInterval)duration direction:(NSInteger)direction repeats:(NSInteger)repeatCount;
 @end
+#endif

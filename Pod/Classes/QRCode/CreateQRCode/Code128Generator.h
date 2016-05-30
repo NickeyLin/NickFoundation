@@ -8,6 +8,8 @@
 
 #import "CodeGenerator.h"
 
+#if TARGET_OS_IOS
+
 typedef NS_ENUM(NSUInteger, Code128GeneratorCodeTable) {
     Code128GeneratorCodeTableAuto = 0,
     Code128GeneratorCodeTableA = 1,
@@ -71,3 +73,4 @@ typedef NS_ENUM(NSUInteger, Code128GeneratorCodeTable) {
 
 - (NSString *)saveSandBoxImageAtPath:(UIImage *)image imgName:(NSString *)imgName;
 @end
+#endif

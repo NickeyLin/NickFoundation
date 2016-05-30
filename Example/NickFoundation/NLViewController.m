@@ -10,7 +10,10 @@
 #import "UserInfoEntity.h"
 #import "NLScanQRUtil.h"
 #import "NLCoreData.h"
-#import <NickFoundation/NickFoundation-umbrella.h>
+#import <NickFoundation/Common.h>
+#import <NickFoundation/NLCoreData.h>
+#import <NickFoundation/NLScanQRUtil.h>
+
 
 //#import "NLScanQRUtil.h"
 
@@ -25,6 +28,7 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     NLCoreData *coredata = [NLCoreData instanceWithModelFileName:@"UserInfo" databaseFileName:@"userinfo.sqlite"];
+    self.view.backgroundColor = [UIColor colorWithRGBHex:0x999999];
 //    UserInfoEntity *entity = [UserInfoEntity insertNewItemInCoreData:coredata fillContent:^(id  _Nullable item) {
 //        [(UserInfoEntity *)item setUName:@"nick"];
 //        
@@ -41,9 +45,9 @@
 }
 - (void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
-    [NLScanQRUtil presentQRScanInViewController:self Complete:^(NSString *result, NSError *error) {
-        NSLog(@"%@, %@", result, error);
-    }];
+//    [NLScanQRUtil presentQRScanInViewController:self Complete:^(NSString *result, NSError *error) {
+//        NSLog(@"%@, %@", result, error);
+//    }];
 }
 - (void)didReceiveMemoryWarning
 {

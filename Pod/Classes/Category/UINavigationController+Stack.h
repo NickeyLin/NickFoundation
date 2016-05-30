@@ -6,7 +6,10 @@
 //  Copyright © 2015年 ChangHong. All rights reserved.
 //
 
+#if TARGET_OS_IOS
+
 #import <UIKit/UIKit.h>
+
 
 @interface UINavigationController (Stack)
 
@@ -58,3 +61,5 @@
 - (void)pushViewControllers:(NSArray *)vcs atIndex:(NSInteger)index animated:(BOOL)animated;
 
 @end
+
+#endif

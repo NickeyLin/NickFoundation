@@ -8,6 +8,7 @@
 
 #import "Code128Generator.h"
 //#import "CodeGenerator.h"
+#if TARGET_OS_IOS
 
 static NSString *const CODE128_ALPHABET_STRING =
 @" !\"#$%&'()*+,-./"
@@ -586,3 +587,4 @@ static NSString *const CODE128_CHARACTER_ENCODINGS[107] = {
 }
 
 @end
+#endif

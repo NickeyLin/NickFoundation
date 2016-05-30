@@ -6,6 +6,11 @@ target 'NickFoundation_Example' do
   pod 'NickFoundation/Encode', :path => '../'
 end
 
+target 'NickFoudation-Example-OSX' do
+    pod 'NickFoundation', :path => '../'
+    pod 'NickFoundation/Encode', :path => '../'
+end
+
 target 'NickFoundation_Tests' do
   pod 'NickFoundation', :path => '../'  
 end

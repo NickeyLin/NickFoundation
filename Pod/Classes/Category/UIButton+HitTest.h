@@ -6,9 +6,12 @@
 //  Copyright © 2015年 ChangHong. All rights reserved.
 //
 
+#if TARGET_OS_IOS
+
 #import <UIKit/UIKit.h>
 
 @interface UIButton (HitTest)
 // 热点区域边界, 可扩大按钮相应区域
 @property (nonatomic, assign) UIEdgeInsets hitTestEdgeInsets;
 @end
+#endif

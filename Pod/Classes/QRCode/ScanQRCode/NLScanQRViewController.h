@@ -5,6 +5,7 @@
 //  Created by Nick.Lin on 15/11/27.
 //  Copyright © 2015年 ChangHong. All rights reserved.
 //
+#if TARGET_OS_IOS
 
 #import <UIKit/UIKit.h>
 #import <AVFoundation/AVFoundation.h>
@@ -37,3 +38,4 @@
  */
 - (void)setCompleteBlock:(ScanQRCompleteBlock)finishingBlock;
 @end
+#endif
