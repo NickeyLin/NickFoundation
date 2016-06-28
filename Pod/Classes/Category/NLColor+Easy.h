@@ -6,6 +6,7 @@
 //  Copyright © 2015年 ChangHong. All rights reserved.
 //
 
+#ifndef NLColor
 #if TARGET_OS_IOS
 #define NLColor UIColor
 #define NLImage UIImage
@@ -14,6 +15,7 @@
 #else
 #define NLColor NSColor
 #define NLImage NSImage
+#endif
 #endif
 
 @interface NLColor (EasyHex)

@@ -7,7 +7,7 @@
 //
 
 #import "NLCoreData.h"
-#import "CHCommonDefine.h"
+#import "Common.h"
 
 #define Defult_ModelFileName @"CoreData"
 #define Defult_SqliteFileName @"CoreData.sqlite"

@@ -33,7 +33,7 @@ Pod::Spec.new do |s|
   s.osx.deployment_target = '10.7'
 
   s.requires_arc = true
-  s.default_subspec = 'UILib','Common','Category','CoreData','QRCode'
+  s.default_subspec = 'UILib','Common','Category'
 
   s.resource_bundles = {
     'NickFoundation' => ['Pod/Assets/*.png']

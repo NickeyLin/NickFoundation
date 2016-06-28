@@ -163,9 +163,9 @@
 }
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-    //    [[NSNotificationCenter defaultCenter]  addObserver:self selector:@selector(applicationWillEnterForeground:)   name:UIApplicationWillEnterForegroundNotification  object:nil];
+    [[NSNotificationCenter defaultCenter]  addObserver:self selector:@selector(appWillEnterForeground:)   name:UIApplicationWillEnterForegroundNotification  object:nil];
     //
-    //    [[NSNotificationCenter defaultCenter]  addObserver:self    selector:@selector(applicationDidEnterBackground:)  name:UIApplicationDidEnterBackgroundNotification  object:nil];
+    [[NSNotificationCenter defaultCenter]  addObserver:self    selector:@selector(appDidEnterBackground:)  name:UIApplicationDidEnterBackgroundNotification  object:nil];
     [self.session startRunning];
     [[UIApplication sharedApplication] setIdleTimerDisabled:YES];
 }
@@ -223,15 +223,15 @@
     _completeBlock = finishingBlock;
 }
 
-//- (void)applicationWillEnterForeground:(NSNotification*)note {
-//    [self.session  startRunning];
-//}
-//
-//- (void)applicationDidEnterBackground:(NSNotification*)note {
-//    [self turnLight:NO];
-//    [self.session stopRunning];
-//
-//}
+- (void)appWillEnterForeground:(NSNotification*)note {
+    [self.session  startRunning];
+}
+
+- (void)appDidEnterBackground:(NSNotification*)note {
+    [self turnLight:NO];
+    [self.session stopRunning];
+
+}
 
 //-(BOOL) navigationShouldPopOnBackButton ///在这个方法里写返回按钮的事件处理
 //{

@@ -14,7 +14,7 @@
 @end
 
 
-@interface CHJsonUtil : NSObject
+@interface NLJson : NSObject
 + (NSString *)jsonObjectToString:(id)jsonObj;
 + (id)stringToJsonObject:(NSString *)str;
 @end

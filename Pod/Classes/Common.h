@@ -9,9 +9,19 @@
 #ifndef Common_h
 #define Common_h
 
+#if DEBUG
+#define CHLog(msg, ...)     NSLog(@"\n%@:%d - %s \n%@ \n\n", [[NSString stringWithUTF8String:__FILE__]lastPathComponent], __LINE__, sel_getName(_cmd), [NSString stringWithFormat:(msg), ##__VA_ARGS__]);
+#define CHLogT(tag, msg)    CHLog(@"%@\n%@", tag, msg)
+#define CHLogO(obj)         CHLog(@"%@", obj)
+
+#else
+#define CHLog(msg, ...)     {}
+#define CHLogT(tag, msg)    {}
+#define CHLogO(obj)         {}
+#endif
+
 /* Common */
-#import "CHCommonDefine.h"
-#import "CHJsonUtil.h"
+#import "NLJson.h"
 
 /* Category */
 #import "NSDate+Easy.h"

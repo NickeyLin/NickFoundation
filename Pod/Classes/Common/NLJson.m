@@ -6,10 +6,10 @@
 //  Copyright © 2015年 ChangHong. All rights reserved.
 //
 
-#import "CHJsonUtil.h"
-#import "CHCommonDefine.h"
+#import "NLJson.h"
+#import "Common.h"
 
-@implementation CHJsonUtil
+@implementation NLJson
 + (NSString *)jsonObjectToString:(id)jsonObj{
     if (!jsonObj || (![jsonObj isKindOfClass:[NSArray class]] && ![jsonObj isKindOfClass:[NSDictionary class]])) {
         CHLog(@"param is not a valid json-object");
@@ -44,7 +44,7 @@
 @implementation NSDictionary (JsonValue)
 
 - (NSString *)jsonStringValue{
-    return [CHJsonUtil jsonObjectToString:self];
+    return [NLJson jsonObjectToString:self];
 }
 - (id)jsonObject{
     return self;
@@ -54,7 +54,7 @@
 @implementation NSArray (JsonValue)
 
 - (NSString *)jsonStringValue{
-    return [CHJsonUtil jsonObjectToString:self];
+    return [NLJson jsonObjectToString:self];
 }
 - (id)jsonObject{
     return self;
@@ -64,7 +64,7 @@
 @implementation NSString (JsonValue)
 
 - (id)jsonObject{
-    return [CHJsonUtil stringToJsonObject:self];
+    return [NLJson stringToJsonObject:self];
 }
 - (NSString *)jsonStringValue{
     return self;

@@ -3,7 +3,10 @@ use_frameworks!
 
 target 'NickFoundation_Example' do
   pod 'NickFoundation', :path => '../'
+  pod 'NickFoundation/CoreData', :path => '../'
   pod 'NickFoundation/Encode', :path => '../'
+  pod 'NickFoundation/QRCode', :path => '../'
+
 end
 
 target 'NickFoudation-Example-OSX' do

@@ -8,7 +8,7 @@
 
 #import "NLViewController.h"
 #import "UserInfoEntity.h"
-#import "NLScanQRUtil.h"
+//#import "NLScanQRUtil.h"
 #import "NLCoreData.h"
 #import <NickFoundation/Common.h>
 #import <NickFoundation/NLCoreData.h>
@@ -45,9 +45,9 @@
 }
 - (void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
-//    [NLScanQRUtil presentQRScanInViewController:self Complete:^(NSString *result, NSError *error) {
-//        NSLog(@"%@, %@", result, error);
-//    }];
+    [NLScanQRUtil presentQRScanInViewController:self Complete:^(NSString *result, NSError *error) {
+        NSLog(@"%@, %@", result, error);
+    }];
 }
 - (void)didReceiveMemoryWarning
 {
