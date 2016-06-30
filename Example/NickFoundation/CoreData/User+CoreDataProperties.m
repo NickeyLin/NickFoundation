@@ -1,21 +1,22 @@
 //
-//  UserInfoEntity+CoreDataProperties.m
+//  User+CoreDataProperties.m
 //  NickFoundation
 //
-//  Created by Nick.Lin on 16/4/20.
+//  Created by Nick.Lin on 16/6/28.
 //  Copyright © 2016年 Nick.Lin. All rights reserved.
 //
 //  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu
 //  to delete and recreate this implementation file for your updated model.
 //
 
-#import "UserInfoEntity+CoreDataProperties.h"
+#import "User+CoreDataProperties.h"
 
-@implementation UserInfoEntity (CoreDataProperties)
+@implementation User (CoreDataProperties)
 
-@dynamic uID;
-@dynamic uName;
-@dynamic uAge;
-@dynamic uColor;
+@dynamic name;
+@dynamic sex;
+@dynamic address;
+@dynamic telephone;
+@dynamic age;
 
 @end

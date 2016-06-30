@@ -1,17 +1,17 @@
 //
-//  UserInfoEntity.h
+//  User.h
 //  NickFoundation
 //
-//  Created by Nick.Lin on 16/4/20.
+//  Created by Nick.Lin on 16/6/28.
 //  Copyright © 2016年 Nick.Lin. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
-#import "NLCoreData.h"
+#import <NickFoundation/NLCoreData.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface UserInfoEntity : NLManagedObject
+@interface User : NLManagedObject
 
 // Insert code here to declare functionality of your managed object subclass
 
@@ -19,4 +19,4 @@ NS_ASSUME_NONNULL_BEGIN
 
 NS_ASSUME_NONNULL_END
 
-#import "UserInfoEntity+CoreDataProperties.h"
+#import "User+CoreDataProperties.h"

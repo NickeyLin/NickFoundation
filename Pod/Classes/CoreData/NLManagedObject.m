@@ -21,6 +21,13 @@
     }
     return item;
 }
++ (instancetype)insertNewItemInCoreData:(NLCoreData *)coreData fillContent:(void (^)(id))fillBlock autoSave:(BOOL)autoSave{
+    id item = [self insertNewItemInCoreData:coreData fillContent:fillBlock];
+    if (autoSave) {
+        [coreData saveContext];
+    }
+    return item;
+}
 
 - (BOOL)saveToContext:(NLCoreData *)coredata{
     if (!coredata) {

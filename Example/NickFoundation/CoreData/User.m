@@ -1,14 +1,14 @@
 //
-//  UserInfoEntity.m
+//  User.m
 //  NickFoundation
 //
-//  Created by Nick.Lin on 16/4/20.
+//  Created by Nick.Lin on 16/6/28.
 //  Copyright © 2016年 Nick.Lin. All rights reserved.
 //
 
-#import "UserInfoEntity.h"
+#import "User.h"
 
-@implementation UserInfoEntity
+@implementation User
 
 // Insert code here to add functionality to your managed object subclass
 

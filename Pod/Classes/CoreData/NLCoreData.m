@@ -144,7 +144,7 @@
         return YES;
     }
     __block BOOL result;
-    [self.persistentStoreCoordinator performBlockAndWait:^{
+    [self.managedObjectContext performBlockAndWait:^{
         NSError *error = nil;
         
         result = [self.managedObjectContext save:&error];

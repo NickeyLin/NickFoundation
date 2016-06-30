@@ -24,6 +24,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    UIButton *btnCancel = [UIButton buttonWithType:UIButtonTypeCustom];
+    [btnCancel setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [btnCancel setTitleColor:[UIColor redColor] forState:UIControlStateHighlighted];
+    [btnCancel addTarget:self action:@selector(actionCancel:) forControlEvents:UIControlEventTouchUpInside];
+    
+    [btnCancel setTitle:@"取消" forState:UIControlStateNormal];
+    btnCancel.frame = CGRectMake(20, 20, 60, 40);
+    [self.view addSubview:btnCancel];
+    
     _lighting = NO;//默认关闭闪光灯
     //扫描区域
     _scanMaskRect = CGRectMake(0, 0,CGRectGetWidth([UIScreen mainScreen].bounds)/3*2, CGRectGetWidth([UIScreen mainScreen].bounds)/3*2);//CGRectMake(_scanMaskX, _scanMaskY, SCAN_WIDTH, SCAN_HEIGHT);
@@ -96,6 +105,7 @@
         [[NSNotificationCenter defaultCenter] removeObserver:self name:UIApplicationWillEnterForegroundNotification object:nil];
         [[NSNotificationCenter defaultCenter] removeObserver:self name:UIApplicationDidEnterBackgroundNotification object:nil];
         [self.navigationController popViewControllerAnimated:YES];
+        [self dismissViewControllerAnimated:YES completion:nil];
         return;
     }
     // 3. 设置输出(Metadata元数据)
@@ -148,6 +158,10 @@
     self.session = session;
 }
 
+- (void)stop{
+    [self turnLight:NO];
+    [self.session stopRunning];
+}
 /**
  *  以动画形式绘制扫描线
  */
@@ -171,9 +185,9 @@
 }
 
 -(void)viewWillDisappear:(BOOL)animated{
-    [self turnLight:NO];
-    [self.session stopRunning];
     [super viewWillDisappear:animated];
+    [self stop];
+
     [[UIApplication sharedApplication] setIdleTimerDisabled:NO];
 }
 
@@ -185,8 +199,7 @@
         
         AVMetadataMachineReadableCodeObject *obj = [metadataObjects firstObject];
         if(_completeBlock &&[obj isKindOfClass:[AVMetadataMachineReadableCodeObject class]]){
-            [self turnLight:NO];
-            [self.session stopRunning];
+            [self stop];
             _completeBlock(obj.stringValue, nil);
         }
     }
@@ -195,6 +208,13 @@
 }
 
 #pragma mark -- 点击按钮相应事件
+- (void)actionCancel:(UIButton *)sender{
+    [self dismissViewControllerAnimated:YES completion:^{
+        if (_completeBlock) {
+            _completeBlock(nil, [NSError errorWithDomain:@"QRCode" code:-1001 userInfo:@{NSLocalizedDescriptionKey:@"已取消"}]);
+        }
+    }];
+}
 - (void) actionFlash:(UIButton *)sender{
     
     BOOL open = !_lighting;
@@ -228,9 +248,7 @@
 }
 
 - (void)appDidEnterBackground:(NSNotification*)note {
-    [self turnLight:NO];
-    [self.session stopRunning];
-
+    [self stop];
 }
 
 //-(BOOL) navigationShouldPopOnBackButton ///在这个方法里写返回按钮的事件处理

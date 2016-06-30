@@ -12,7 +12,9 @@
 
 @interface NLManagedObject : NSManagedObject
 + (nonnull instancetype)insertNewItemInCoreData:(nonnull NLCoreData *)coreData;
-+ (nonnull instancetype)insertNewItemInCoreData:(nonnull NLCoreData *)coreData fillContent:(void (^ _Nullable)(_Nullable id item))fillBlock;
++ (nonnull instancetype)insertNewItemInCoreData:(nonnull NLCoreData *)coreData fillContent:(void (^ _Nullable)(_Nonnull id item))fillBlock;
++ (nonnull instancetype)insertNewItemInCoreData:(nonnull NLCoreData *)coreData fillContent:(void (^ _Nullable)(_Nonnull id item))fillBlock autoSave:(BOOL)autoSave;
+
 - (BOOL)saveToContext:(nonnull NLCoreData *)coredata;
 - (BOOL)removeFrom:(nonnull NLCoreData *)cda;
 

@@ -9,9 +9,6 @@
 /* Begin PBXBuildFile section */
 		010619D81CE46294000FA734 /* NSDateEasyTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 010619D71CE46294000FA734 /* NSDateEasyTest.m */; };
 		010619DA1CE47125000FA734 /* NLNSStringHexTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 010619D91CE47125000FA734 /* NLNSStringHexTest.m */; };
-		012531831CC7588F00BF21A4 /* UserInfo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 012531811CC7588F00BF21A4 /* UserInfo.xcdatamodeld */; };
-		0125318E1CC75A0200BF21A4 /* UserInfoEntity+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 0125318B1CC75A0200BF21A4 /* UserInfoEntity+CoreDataProperties.m */; };
-		0125318F1CC75A0200BF21A4 /* UserInfoEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 0125318D1CC75A0200BF21A4 /* UserInfoEntity.m */; };
 		012531951CC76BBB00BF21A4 /* NLCoreDataTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 012531941CC76BBA00BF21A4 /* NLCoreDataTests.m */; };
 		01431EB11CFC346B003A731F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 01431EB01CFC346B003A731F /* AppDelegate.m */; };
 		01431EB41CFC346B003A731F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 01431EB31CFC346B003A731F /* main.m */; };
@@ -19,6 +16,14 @@
 		01431EB91CFC346C003A731F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01431EB81CFC346C003A731F /* Assets.xcassets */; };
 		01431EBC1CFC346C003A731F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01431EBA1CFC346C003A731F /* Main.storyboard */; };
 		01431EC71CFC346C003A731F /* NickFoudation_Example_OSXTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 01431EC61CFC346C003A731F /* NickFoudation_Example_OSXTests.m */; };
+		01E258021D2246710054CD88 /* Launch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01E258011D2246710054CD88 /* Launch.storyboard */; };
+		01E258101D2247860054CD88 /* NLQRCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01E2580F1D2247860054CD88 /* NLQRCodeViewController.m */; };
+		01E258121D2248830054CD88 /* QRCode.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01E258111D2248830054CD88 /* QRCode.storyboard */; };
+		01E258151D2254F00054CD88 /* Contacts.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 01E258131D2254F00054CD88 /* Contacts.xcdatamodeld */; };
+		01E2581A1D2256C30054CD88 /* CoreData.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01E258191D2256C30054CD88 /* CoreData.storyboard */; };
+		01E2581D1D2256F50054CD88 /* NLCoreDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01E2581C1D2256F50054CD88 /* NLCoreDataViewController.m */; };
+		01E258221D2257E00054CD88 /* User+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 01E2581F1D2257E00054CD88 /* User+CoreDataProperties.m */; };
+		01E258231D2257E00054CD88 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 01E258211D2257E00054CD88 /* User.m */; };
 		511B5BFB6AAA491389F31D47 /* Pods_NickFoundation_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBF718CDDF77E8E11E260821 /* Pods_NickFoundation_Example.framework */; };
 		5790A9FA4D60F0CADE0F6FDE /* Pods_NickFoundation_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6C495FFB7E8A8405522426D /* Pods_NickFoundation_Tests.framework */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
@@ -27,7 +32,6 @@
 		6003F598195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F596195388D20070C39A /* InfoPlist.strings */; };
 		6003F59A195388D20070C39A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F599195388D20070C39A /* main.m */; };
 		6003F59E195388D20070C39A /* NLAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F59D195388D20070C39A /* NLAppDelegate.m */; };
-		6003F5A7195388D20070C39A /* NLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5A6195388D20070C39A /* NLViewController.m */; };
 		6003F5A9195388D20070C39A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5A8195388D20070C39A /* Images.xcassets */; };
 		6003F5B0195388D20070C39A /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F5AF195388D20070C39A /* XCTest.framework */; };
 		6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
@@ -58,11 +62,6 @@
 /* Begin PBXFileReference section */
 		010619D71CE46294000FA734 /* NSDateEasyTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDateEasyTest.m; sourceTree = "<group>"; };
 		010619D91CE47125000FA734 /* NLNSStringHexTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NLNSStringHexTest.m; sourceTree = "<group>"; };
-		012531821CC7588F00BF21A4 /* UserInfo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = UserInfo.xcdatamodel; sourceTree = "<group>"; };
-		0125318A1CC75A0200BF21A4 /* UserInfoEntity+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UserInfoEntity+CoreDataProperties.h"; sourceTree = "<group>"; };
-		0125318B1CC75A0200BF21A4 /* UserInfoEntity+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UserInfoEntity+CoreDataProperties.m"; sourceTree = "<group>"; };
-		0125318C1CC75A0200BF21A4 /* UserInfoEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfoEntity.h; sourceTree = "<group>"; };
-		0125318D1CC75A0200BF21A4 /* UserInfoEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfoEntity.m; sourceTree = "<group>"; };
 		012531941CC76BBA00BF21A4 /* NLCoreDataTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NLCoreDataTests.m; sourceTree = "<group>"; };
 		01431EAD1CFC346B003A731F /* NickFoudation-Example-OSX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NickFoudation-Example-OSX.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		01431EAF1CFC346B003A731F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -76,6 +75,18 @@
 		01431EC21CFC346C003A731F /* NickFoudation-Example-OSXTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "NickFoudation-Example-OSXTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		01431EC61CFC346C003A731F /* NickFoudation_Example_OSXTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NickFoudation_Example_OSXTests.m; sourceTree = "<group>"; };
 		01431EC81CFC346C003A731F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		01E258011D2246710054CD88 /* Launch.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Launch.storyboard; sourceTree = "<group>"; };
+		01E2580E1D2247860054CD88 /* NLQRCodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NLQRCodeViewController.h; sourceTree = "<group>"; };
+		01E2580F1D2247860054CD88 /* NLQRCodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NLQRCodeViewController.m; sourceTree = "<group>"; };
+		01E258111D2248830054CD88 /* QRCode.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = QRCode.storyboard; sourceTree = "<group>"; };
+		01E258141D2254F00054CD88 /* Contacts.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Contacts.xcdatamodel; sourceTree = "<group>"; };
+		01E258191D2256C30054CD88 /* CoreData.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CoreData.storyboard; sourceTree = "<group>"; };
+		01E2581B1D2256F50054CD88 /* NLCoreDataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NLCoreDataViewController.h; sourceTree = "<group>"; };
+		01E2581C1D2256F50054CD88 /* NLCoreDataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NLCoreDataViewController.m; sourceTree = "<group>"; };
+		01E2581E1D2257E00054CD88 /* User+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "User+CoreDataProperties.h"; sourceTree = "<group>"; };
+		01E2581F1D2257E00054CD88 /* User+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "User+CoreDataProperties.m"; sourceTree = "<group>"; };
+		01E258201D2257E00054CD88 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		01E258211D2257E00054CD88 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		0984EE6082BE7A65DACC6970 /* Pods-NickFoudation-Example-OSX.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NickFoudation-Example-OSX.release.xcconfig"; path = "Pods/Target Support Files/Pods-NickFoudation-Example-OSX/Pods-NickFoudation-Example-OSX.release.xcconfig"; sourceTree = "<group>"; };
 		0F012B79E15292A1AB955CA4 /* Pods-NickFoundation_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NickFoundation_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-NickFoundation_Example/Pods-NickFoundation_Example.release.xcconfig"; sourceTree = "<group>"; };
 		2AB936A5B8132EA63B2629A7 /* NickFoundation.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = NickFoundation.podspec; path = ../NickFoundation.podspec; sourceTree = "<group>"; };
@@ -91,8 +102,6 @@
 		6003F59B195388D20070C39A /* NickFoundation-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NickFoundation-Prefix.pch"; sourceTree = "<group>"; };
 		6003F59C195388D20070C39A /* NLAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NLAppDelegate.h; sourceTree = "<group>"; };
 		6003F59D195388D20070C39A /* NLAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NLAppDelegate.m; sourceTree = "<group>"; };
-		6003F5A5195388D20070C39A /* NLViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NLViewController.h; sourceTree = "<group>"; };
-		6003F5A6195388D20070C39A /* NLViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NLViewController.m; sourceTree = "<group>"; };
 		6003F5A8195388D20070C39A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		6003F5AE195388D20070C39A /* NickFoundation_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NickFoundation_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F5AF195388D20070C39A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -151,18 +160,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		012531801CC7586600BF21A4 /* CoreDataTest */ = {
-			isa = PBXGroup;
-			children = (
-				012531811CC7588F00BF21A4 /* UserInfo.xcdatamodeld */,
-				0125318A1CC75A0200BF21A4 /* UserInfoEntity+CoreDataProperties.h */,
-				0125318B1CC75A0200BF21A4 /* UserInfoEntity+CoreDataProperties.m */,
-				0125318C1CC75A0200BF21A4 /* UserInfoEntity.h */,
-				0125318D1CC75A0200BF21A4 /* UserInfoEntity.m */,
-			);
-			name = CoreDataTest;
-			sourceTree = "<group>";
-		};
 		01431EAE1CFC346B003A731F /* NickFoudation-Example-OSX */ = {
 			isa = PBXGroup;
 			children = (
@@ -193,6 +190,31 @@
 				01431EC81CFC346C003A731F /* Info.plist */,
 			);
 			path = "NickFoudation-Example-OSXTests";
+			sourceTree = "<group>";
+		};
+		01E258031D2247700054CD88 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				01E258131D2254F00054CD88 /* Contacts.xcdatamodeld */,
+				01E2581E1D2257E00054CD88 /* User+CoreDataProperties.h */,
+				01E2581F1D2257E00054CD88 /* User+CoreDataProperties.m */,
+				01E258201D2257E00054CD88 /* User.h */,
+				01E258211D2257E00054CD88 /* User.m */,
+				01E258191D2256C30054CD88 /* CoreData.storyboard */,
+				01E2581B1D2256F50054CD88 /* NLCoreDataViewController.h */,
+				01E2581C1D2256F50054CD88 /* NLCoreDataViewController.m */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		01E2580A1D2247700054CD88 /* QRCode */ = {
+			isa = PBXGroup;
+			children = (
+				01E2580E1D2247860054CD88 /* NLQRCodeViewController.h */,
+				01E2580F1D2247860054CD88 /* NLQRCodeViewController.m */,
+				01E258111D2248830054CD88 /* QRCode.storyboard */,
+			);
+			path = QRCode;
 			sourceTree = "<group>";
 		};
 		6003F581195388D10070C39A = {
@@ -237,12 +259,12 @@
 		6003F593195388D20070C39A /* Example for NickFoundation */ = {
 			isa = PBXGroup;
 			children = (
-				012531801CC7586600BF21A4 /* CoreDataTest */,
+				01E258031D2247700054CD88 /* CoreData */,
+				01E2580A1D2247700054CD88 /* QRCode */,
 				6003F59C195388D20070C39A /* NLAppDelegate.h */,
 				6003F59D195388D20070C39A /* NLAppDelegate.m */,
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
-				6003F5A5195388D20070C39A /* NLViewController.h */,
-				6003F5A6195388D20070C39A /* NLViewController.m */,
+				01E258011D2246710054CD88 /* Launch.storyboard */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
 			);
@@ -452,9 +474,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01E258021D2246710054CD88 /* Launch.storyboard in Resources */,
 				873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */,
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
 				6003F598195388D20070C39A /* InfoPlist.strings in Resources */,
+				01E258121D2248830054CD88 /* QRCode.storyboard in Resources */,
+				01E2581A1D2256C30054CD88 /* CoreData.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -629,12 +654,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				012531831CC7588F00BF21A4 /* UserInfo.xcdatamodeld in Sources */,
+				01E258221D2257E00054CD88 /* User+CoreDataProperties.m in Sources */,
 				6003F59E195388D20070C39A /* NLAppDelegate.m in Sources */,
-				0125318E1CC75A0200BF21A4 /* UserInfoEntity+CoreDataProperties.m in Sources */,
-				6003F5A7195388D20070C39A /* NLViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
-				0125318F1CC75A0200BF21A4 /* UserInfoEntity.m in Sources */,
+				01E258101D2247860054CD88 /* NLQRCodeViewController.m in Sources */,
+				01E258231D2257E00054CD88 /* User.m in Sources */,
+				01E2581D1D2256F50054CD88 /* NLCoreDataViewController.m in Sources */,
+				01E258151D2254F00054CD88 /* Contacts.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -860,7 +886,6 @@
 			baseConfigurationReference = 543A0116EAC9DEA0AFA983C9 /* Pods-NickFoundation_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NickFoundation/NickFoundation-Prefix.pch";
 				INFOPLIST_FILE = "NickFoundation/NickFoundation-Info.plist";
@@ -877,7 +902,6 @@
 			baseConfigurationReference = 0F012B79E15292A1AB955CA4 /* Pods-NickFoundation_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NickFoundation/NickFoundation-Prefix.pch";
 				INFOPLIST_FILE = "NickFoundation/NickFoundation-Info.plist";
@@ -986,13 +1010,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		012531811CC7588F00BF21A4 /* UserInfo.xcdatamodeld */ = {
+		01E258131D2254F00054CD88 /* Contacts.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				012531821CC7588F00BF21A4 /* UserInfo.xcdatamodel */,
+				01E258141D2254F00054CD88 /* Contacts.xcdatamodel */,
 			);
-			currentVersion = 012531821CC7588F00BF21A4 /* UserInfo.xcdatamodel */;
-			path = UserInfo.xcdatamodeld;
+			currentVersion = 01E258141D2254F00054CD88 /* Contacts.xcdatamodel */;
+			path = Contacts.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
